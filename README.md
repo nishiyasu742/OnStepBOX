@@ -60,9 +60,8 @@ Be sure to select the correct board definition in OnStep when compiling.
 
 ## Required Components
 
-- ESP32 development board (ESP-WROOM-32 recommended)  
+- ESP32 development board (ESP-32S recommended)  
 - Stepper motor drivers (e.g., DRV8825, TMC5160)  
-- USB-PD trigger module  
 - Standard OnStep-compatible connectors and cables  
 - Off-the-shelf plastic enclosure (Takachi LC135-H-N-W)  
 - Miscellaneous components (buttons, display, etc.)  
