@@ -1,4 +1,4 @@
-![４](https://github.com/user-attachments/assets/b5356926-2887-492b-bf77-f7f510afd9e3)# OnStepBOX
+# OnStepBOX
 
 OnStepBOX is a compact, integrated controller box that combines an OnStep-compatible Smart Hand Controller (SHC) and the main OnStep controller into a single unit.  
 This project is based on the **OnStep MaxESP3 hardware design** and uses the **OnStep firmware (GPLv3 licensed)**.  
