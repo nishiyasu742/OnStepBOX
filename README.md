@@ -51,7 +51,7 @@ This project is based on the **OnStep MaxESP3 hardware design** and uses the **O
 This project follows the **OnStep MaxESP3** pin mapping for firmware configuration.  
 Be sure to select the correct board definition in OnStep when compiling.  
 
-- Example schematic (simplified):  
+- Schematic:  
  ![OnStepBOX回路図](https://github.com/user-attachments/assets/bd2e13ab-23ee-4c81-b1a7-56473de34f30)
 
 
