@@ -27,7 +27,7 @@ This project is based on the **OnStep MaxESP3 hardware design** and uses the **O
 
 ## Photos
 
-> Replace with actual photos of the assembled unit, inside and outside.
+
 
 - Image captured using a Takahashi EM200 mount.  
   ![１](https://github.com/user-attachments/assets/b6eef8e2-6a49-451e-a25b-f3ea39513ce8)
