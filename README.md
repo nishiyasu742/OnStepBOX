@@ -1,40 +1,108 @@
-# OnStepBOX
-For the past few years, I have been enjoying astronomical observations by connecting OnStep with the SHC (Smart Hand Controller) online. However, I found it inconvenient to use two separate devices during observing sessions. To address this, I set out to combine both functions into a single unit.
+![４](https://github.com/user-attachments/assets/b5356926-2887-492b-bf77-f7f510afd9e3)# OnStepBOX
 
-About two years ago, I succeeded in merging them, and since then I have been using the combined device—what I call OnStepBOX—for my personal observations. In practical use, I have not experienced any problems, so I decided to make the design public.
+OnStepBOX is a compact, integrated controller box that combines an OnStep-compatible Smart Hand Controller (SHC) and the main OnStep controller into a single unit.  
+This project is based on the **OnStep MaxESP3 hardware design** and uses the **OnStep firmware (GPLv3 licensed)**.  
 
-I am not an electronics expert, so if you notice any issues or improper parts of the circuit, I would greatly appreciate your feedback.
+---
 
-Hardware Notes
-The case is made by milling an off-the-shelf plastic enclosure
-(Manufacturer: TAKACHI Electric Enclosure Co., Ltd., Product No.: LC135-H-N-W,
-Product Page).
-The circuit design was created using the free version of Eagle (limited to 10 cm × 10 cm).
-The LCD is mounted separately on another PCB.
-This circuit currently uses an ESP-32 development board. A prototype using the ESP-WROOM-32 module is under testing, and once it operates successfully, it will also be released.
-Connections
-OnStep and motors are wired through RJ45.
-Autoguiders (e.g., M-GEN) are connected using RJ11 modular cables.
-Although I was initially concerned about driving the motors with modular cables, using larger jacks would not fit within a single enclosure, so I adopted this approach. In operation:
+## Overview
 
-Motor current during sidereal tracking: ~0.3 A
-Motor current during GoTo slewing: ~0.9 A
-So far, no overheating or other issues have occurred.
+- **Purpose**: Simplify telescope control by merging two devices (main OnStep controller + SHC) into one.  
+- **Base design**: Derived from the [OnStep MaxESP3](https://onstep.groups.io/g/main/wiki/MaxESP3) hardware.  
+- **Firmware**: Fully compatible with OnStep firmware (licensed under GPLv3).  
+- **Use case**: Ideal for amateur astronomers who want a reliable, compact, and user-friendly OnStep system without carrying multiple devices.  
 
-Included Files in This Repository
-This repository contains all the resources needed to reproduce or modify the OnStepBOX:
+---
 
-📷 Images: Exterior and interior photos of the assembled device
-🛠️ G-code: CNC milling data required for case processing
-📐 Eagle Files: Circuit schematic and board layout created with Eagle (free version, 10 × 10 cm limit)
-🗂️ Gerber Files: Ready-to-fabricate PCB production data
-Conclusion
-The OnStepBOX, which combines OnStep and SHC in one case, has proven to be very convenient.
+## Features
 
-Acknowledgment
-Finally, I would like to express my deepest respect and gratitude to Mr. Howard Dutton for providing the magnificent OnStep system.
+- Integrated SHC and OnStep controller in a single enclosure  
+- Based on the proven **OnStep MaxESP3 circuit design**  
+- Compatible with the official OnStep firmware (GPLv3)  
+- USB-PD powered stepper motor driver with TMC2209 support  
+- Compact build using an off-the-shelf plastic enclosure (machined, not 3D-printed)  
+- Designed for DIY assembly with widely available components  
 
-Contact
-If you have questions or find any issues, please feel free to contact me via Groups.io or other channels.
+---
+
+## Photos
+
+> Replace with actual photos of the assembled unit, inside and outside.
+
+- Image captured using a Takahashi EM200 mount.  
+  ![１](https://github.com/user-attachments/assets/b6eef8e2-6a49-451e-a25b-f3ea39513ce8)
+
+
+- OnStepBOX's appearance  
+  ![２](https://github.com/user-attachments/assets/d4c9ff88-3c86-483d-a861-04df58b4baf9)
+
+- The bottom surface of OnStepBOX  
+ ![３](https://github.com/user-attachments/assets/0d02b4d1-f0de-44f6-b6c1-69fcf6772284)
+
+
+- Inside the OnStepBOX  
+  ![４](https://github.com/user-attachments/assets/f67b535e-504f-4364-8aed-e7f253490f6c)
+
+
+---
+
+## Schematic & Pin Mapping
+
+This project follows the **OnStep MaxESP3** pin mapping for firmware configuration.  
+Be sure to select the correct board definition in OnStep when compiling.  
+
+- Example schematic (simplified):  
+  ![schematic](docs/images/schematic.png)
+
+> ⚠️ Please confirm wiring carefully. Incorrect wiring may damage your board or motors.
+
+---
+
+## Required Components
+
+- ESP32 development board (ESP-WROOM-32 recommended)  
+- Stepper motor drivers (e.g., TMC2209)  
+- USB-PD trigger module  
+- Standard OnStep-compatible connectors and cables  
+- Off-the-shelf plastic enclosure (e.g., Takachi LC135-H-N-W)  
+- Miscellaneous components (buttons, display, etc.)  
+
+---
+
+## Assembly Instructions
+
+1. **Prepare the enclosure**  
+   - Machine openings for connectors, display, and buttons.  
+2. **Mount the ESP32 and motor drivers**  
+   - Use standoffs or direct PCB mounting as appropriate.  
+3. **Wire according to schematic**  
+   - Follow the **MaxESP3 pin map** for OnStep firmware.  
+4. **Install OnStep firmware**  
+   - Download the latest OnStep firmware.  
+   - Configure pins according to MaxESP3.  
+   - Flash firmware to ESP32.  
+5. **Final checks**  
+   - Verify motor movement.  
+   - Test SHC interface.  
+   - Confirm alignment and control with telescope mount.  
+
+---
+
+## License
+
+This project is distributed under the **GNU General Public License v3 (GPLv3)**.  
+Since it is derived from **OnStep hardware and firmware**, it must remain open source.  
+
+- A full copy of the GPLv3 license text is included in the [LICENSE](LICENSE) file.  
+
+---
+
+## Acknowledgments
+
+- Original [OnStep project](https://onstep.groups.io/g/main) by **Howard Dutton** and contributors  
+- OnStep MaxESP3 hardware design (the base for this project)  
+- Open-source astronomy community for valuable feedback and improvements  
+
+---
 
 — NEWEVI
