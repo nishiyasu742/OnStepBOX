@@ -18,8 +18,7 @@ This project is based on the **OnStep MaxESP3 hardware design** and uses the **O
 
 - Integrated SHC and OnStep controller in a single enclosure  
 - Based on the proven **OnStep MaxESP3 circuit design**  
-- Compatible with the official OnStep firmware (GPLv3)  
-- USB-PD powered stepper motor driver with TMC2209 support  
+- Compatible with the official OnStep firmware (GPLv3)    
 - Compact build using an off-the-shelf plastic enclosure (machined, not 3D-printed)  
 - Designed for DIY assembly with widely available components  
 
@@ -62,31 +61,34 @@ Be sure to select the correct board definition in OnStep when compiling.
 ## Required Components
 
 - ESP32 development board (ESP-WROOM-32 recommended)  
-- Stepper motor drivers (e.g., TMC2209)  
+- Stepper motor drivers (e.g., DRV8825, TMC5160)  
 - USB-PD trigger module  
 - Standard OnStep-compatible connectors and cables  
-- Off-the-shelf plastic enclosure (e.g., Takachi LC135-H-N-W)  
+- Off-the-shelf plastic enclosure (Takachi LC135-H-N-W)  
 - Miscellaneous components (buttons, display, etc.)  
 
 ---
 
 ## Assembly Instructions
 
-1. **Prepare the enclosure**  
-   - Machine openings for connectors, display, and buttons.  
-2. **Mount the ESP32 and motor drivers**  
-   - Use standoffs or direct PCB mounting as appropriate.  
-3. **Wire according to schematic**  
-   - Follow the **MaxESP3 pin map** for OnStep firmware.  
-4. **Install OnStep firmware**  
-   - Download the latest OnStep firmware.  
-   - Configure pins according to MaxESP3.  
-   - Flash firmware to ESP32.  
-5. **Final checks**  
-   - Verify motor movement.  
-   - Test SHC interface.  
-   - Confirm alignment and control with telescope mount.  
+- **Prepare the enclosure**  
+  Purchase the specified case (Takachi LC135-H-N-W)  and machine openings for connectors, display, and buttons using the attached G-code with a CNC milling machine.
 
+- **Prepare the PCB**  
+  Send the attached Gerber files to a PCB manufacturer (e.g., Elecrow, JLCPCB) and place an order.
+
+- **Assemble the PCB**  
+  Purchase the required components and solder them to complete the PCB.
+
+- **Flash the firmware**  
+  - Download the latest OnStep firmware.  
+  - Flash the first MPU following the MaxESP3 pin map.  
+  - Flash the second MPU with the Smart Hand Controller firmware.  
+
+- **Final checks**  
+  - Verify motor wiring and operation.  
+  - Test the SHC interface.  
+  - Confirm alignment and control with the telescope mount.  
 ---
 
 ## License
